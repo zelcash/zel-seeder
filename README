@@ -1,14 +1,14 @@
-zelcash-seeder
+zel-seeder
 ==============
 
-ZelCash-seeder is a crawler for the ZelCash network, which exposes a list
+zel-seeder is a crawler for the Zel network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
 * regularly revisits known nodes to check their availability
 * bans nodes after enough failures, or bad behaviour
-* accepts nodes down to v3.1.0 to request new IP addresses from,
-  and reports good starting v3.1.0 as well.
+* accepts nodes down to v3.2.0 to request new IP addresses from,
+  and reports good starting v3.2.0 as well.
 * keeps statistics over (exponential) windows of 2 hours, 8 hours,
   1 day and 1 week, to base decisions on.
 * very low memory (a few tens of megabytes) and cpu requirements.

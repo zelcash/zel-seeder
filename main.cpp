@@ -35,7 +35,7 @@ public:
   CDnsSeedOpts() : nThreads(96), nDnsThreads(4), nPort(53), mbox(NULL), ns(NULL), host(NULL), tor(NULL), fUseTestNet(false), fWipeBan(false), fWipeIgnore(false), ipv4_proxy(NULL), ipv6_proxy(NULL) {}
 
   void ParseCommandLine(int argc, char **argv) {
-    static const char *help = "ZelCash-seeder\n"
+    static const char *help = "zel-seeder\n"
                               "Usage: %s -h <host> -n <ns> [-m <mbox>] [-t <threads>] [-p <port>]\n"
                               "\n"
                               "Options:\n"
@@ -397,13 +397,13 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"dnsseed.zelcash.online", "dnsseed-cz.zelcash.online", "explorer.zel.cash", "explorer-asia.zel.cash", ""};
-static const string testnet_seeds[] = {"dnsseedtestnet.zelcash.online", "dnsseedtestnet-cz.zelcash.online", "testnet.zel.cash", ""};
+static const string mainnet_seeds[] = {"singapore.zel.network", "bangalore.zel.network", "frankfurt.zel.network", "newyork.zel.network", "dnsseed.zelcash.online", "dnsseed-cz.zelcash.online", "explorer.zel.cash", "explorer-asia.zel.cash", ""};
+static const string testnet_seeds[] = {"test.singapore.zel.network", "test.bangalore.zel.network", "test.frankfurt.zel.network", "test.newyork.zel.network", "dnsseedtestnet.zelcash.online", "dnsseedtestnet-cz.zelcash.online", "testnet.zel.cash", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   /* if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8333), true);
+    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 26125), true);
   } */
   do {
     for (int i=0; seeds[i] != ""; i++) {
